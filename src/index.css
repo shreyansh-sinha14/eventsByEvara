@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: "Playfair Display", serif;
+}
+
+/* Signature: scalloped "invitation edge" divider, echoing the die-cut
+   edge of an event ticket/card. Used at hero and footer transitions. */
+.scallop-bottom {
+  -webkit-mask-image: radial-gradient(circle at 12px 0, transparent 11px, black 11.5px);
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-repeat: repeat-x;
+  -webkit-mask-position: bottom;
+  mask-image: radial-gradient(circle at 12px 0, transparent 11px, black 11.5px);
+  mask-size: 24px 24px;
+  mask-repeat: repeat-x;
+  mask-position: bottom;
+}
+
+.scallop-top {
+  -webkit-mask-image: radial-gradient(circle at 12px 24px, transparent 11px, black 11.5px);
+  -webkit-mask-size: 24px 24px;
+  -webkit-mask-repeat: repeat-x;
+  -webkit-mask-position: top;
+  mask-image: radial-gradient(circle at 12px 24px, transparent 11px, black 11.5px);
+  mask-size: 24px 24px;
+  mask-repeat: repeat-x;
+  mask-position: top;
+}
+
+.underline-grow {
+  position: relative;
+}
+
+.underline-grow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 40px;
+  background: #e7b740;
+  transition: width 0.3s ease;
+}
+
+.underline-grow:hover::after {
+  width: 100%;
+}
+
+.card-hover {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(44, 15, 74, 0.35);
+}
